@@ -1,0 +1,148 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  padding: 36px 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-input {
+  font-family: inherit;
+  width: 272px;
+
+  height: 40px;
+
+  padding: 8px 16px;
+
+  border-radius: 4px;
+  border: 1px solid #808080;
+  color: inherit;
+  outline: none;
+  transition: border-color 0.25s ease-in-out;
+}
+
+.search-input:hover,
+.search-input:focus-visible {
+  border-color: #000000;
+}
+
+.search-input:not(:placeholder-shown) {
+  border-color: #4e75ff;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
+  border-radius: 8px;
+  border: none;
+
+  padding: 8px 16px;
+
+  width: fit-content;
+  background-color: #4e75ff;
+
+  transition: background-color 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #6c8cff;
+}
+
+.loader-text {
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1128px;
+}
+
+/* For tablets and up */
+@media only screen and (min-width: 768px) {
+  .gallery {
+    max-width: 768px;
+  }
+}
+
+/* For desktops and up */
+@media only screen and (min-width: 1200px) {
+  .gallery {
+    max-width: 1128px;
+  }
+}
+
+.gallery-item {
+  flex: 0 0 100%;
+  border: 1px solid #808080;
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery-item {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gallery-item {
+    flex: 0 0 calc((100% - 48px) / 3);
+  }
+}
+
+.img-wrapper {
+  height: 152px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 4px 20px;
+
+  background-color: #ffffff;
+}
+
+.info {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.info p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.info span {
+  line-height: 2;
+}

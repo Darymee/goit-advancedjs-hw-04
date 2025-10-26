@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Pixabay Search</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <main class="container">
+      <div class="wrapper">
+        <!-- форма -->
+        <form class="form" autocomplete="off">
+          <input
+            class="search-input"
+            name="query"
+            type="text"
+            placeholder="Search images..."
+          />
+          <button type="submit" class="search-button btn">Search</button>
+        </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+        <!-- галерея -->
+        <ul class="gallery"></ul>
+
+        <!-- кнопка завантаження -->
+        <button type="button" class="load-more-button btn visually-hidden">
+          Load more
+        </button>
+
+        <!-- Лоадер -->
+        <div class="loader-wrapper visually-hidden">
+          <span class="loader"></span>
+        </div>
+      </div>
     </main>
-
-    <load src="./partials/footer.html" />
 
     <script type="module" src="./main.js"></script>
   </body>

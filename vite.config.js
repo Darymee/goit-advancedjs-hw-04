@@ -3,12 +3,16 @@ import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+import path from 'node:path';
+
+const repoBase = '/goit-advancedjs-hw-03/';
 
 export default defineConfig(({ command }) => {
   return {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
+    base: command === 'serve' ? '/' : repoBase,
     root: 'src',
     build: {
       sourcemap: true,
@@ -36,6 +40,7 @@ export default defineConfig(({ command }) => {
       },
       outDir: '../dist',
       emptyOutDir: true,
+      envDir: path.resolve(__dirname),
     },
     plugins: [
       injectHTML(),
